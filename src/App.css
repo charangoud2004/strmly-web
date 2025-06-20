@@ -1,0 +1,103 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Main app container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+/* Sidebars */
+.sidebar {
+  width: 8.33%; /* 1/12 of screen */
+  background-color: #000;
+  z-index: 1;
+}
+
+.left-sidebar {
+  position: fixed;
+  left: 0;
+  height: 100%;
+}
+
+.right-sidebar {
+  position: fixed;
+  right: 0;
+  height: 100%;
+}
+
+/* Main content area */
+.main-content {
+  width: 83.33%; /* 10/12 of screen */
+  margin: 0 auto;
+  position: relative;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  background-color: #111;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.main-content::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+/* Video containers */
+.video-container {
+  scroll-snap-align: start;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Loading indicator */
+.loading-indicator {
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Error screen */
+.error-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #700;
+  color: white;
+  font-size: 1.5rem;
+}/* Profile Page Styles */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #101010;
+}
+
+.profile-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.profile-title {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-subtitle {
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+/* Ensure the main app container takes full height */
+.app-container {
+  min-height: 100vh;
+}
