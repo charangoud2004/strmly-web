@@ -47,8 +47,10 @@ strmly-web/
 Then open your browser at http://localhost:5173
 
 ##Screenshots
-![image](https://github.com/user-attachments/assets/6b09b258-158f-4dc6-9b0a-3713392b2c2c)
-![image](https://github.com/user-attachments/assets/ede2efd2-2cea-47ad-bcd0-cc9b8cbe08cf)
+![image](https://github.com/user-attachments/assets/4ffc7213-0aba-4bcf-b147-9b8bcbba20f6)
+
+![image](https://github.com/user-attachments/assets/74aa6ff0-4099-4349-9460-773b62747ef5)
+
 
 
 ## License
