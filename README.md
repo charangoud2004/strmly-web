@@ -49,7 +49,8 @@ Then open your browser at http://localhost:5173
 ##Screenshots
 ![image](https://github.com/user-attachments/assets/4ffc7213-0aba-4bcf-b147-9b8bcbba20f6)
 
-![image](https://github.com/user-attachments/assets/74aa6ff0-4099-4349-9460-773b62747ef5)
+![image](https://github.com/user-attachments/assets/cfecab7a-5912-4edd-92cf-4ddcd8fd022b)
+
 
 
 
