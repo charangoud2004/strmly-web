@@ -83,32 +83,44 @@ const VideoCard = ({ video }) => {
           <p className="video-description">{video.description}</p>
         </div>
 
-       
         <div className="right-stats">
           <div className="stat-item">
-            <button onClick={toggleLike} className="like-button">
-              <span
-                style={{ fontSize: "32px", color: isLiked ? "red" : "white" }}
-              >
-                {isLiked ? "❤️" : "🤍"}
-              </span>
-            </button>
+            <i
+              className="fa-solid fa-heart"
+              style={{
+                color: isLiked ? "red" : "white",
+                fontSize: "40px",
+                cursor: "pointer",
+              }}
+              onClick={toggleLike}
+            ></i>
             <span className="count">{video.likes}</span>
           </div>
 
           <div className="stat-item">
-            <span className="icon">💬</span>
+            <span className="icon">
+              <i class="fa-solid fa-comment" style={{ color: "#D3d3d3" }}></i>
+            </span>
             <span className="count">{video.comments}</span>
           </div>
           <div className="stat-item">
-            <span className="icon">🔁</span>
+            <span className="icon">
+              <i class="fa-solid fa-share" style={{ color: "#" }}></i>
+            </span>
             <span className="count">{video.shares}</span>
           </div>
           <div className="stat-item">
-            <span className="icon">💰</span>
+            <span className="icon">
+              <i class="fa-solid fa-sack-dollar" style={{ color: "gold" }}></i>
+            </span>
             <span className="count">{video.earnings}</span>
           </div>
-          <div className="icon">⋮</div>
+          <div className="icon">
+            <i
+              class="fa-solid fa-ellipsis-vertical"
+              style={{ color: "white" }}
+            ></i>
+          </div>
         </div>
       </div>
     </div>
