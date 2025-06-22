@@ -1,5 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import BottomNav from "./components/BottomNav";
 import VideoCard from "./components/videoCard";
 import ProfilePage from "./components/ProfilePage";
@@ -13,6 +18,7 @@ function VideoFeed() {
   const [error, setError] = useState(null);
   const [userId, setUserId] = useState(localStorage.getItem("userId"));
   const [page, setPage] = useState(1);
+  const [currentVideoId, setCurrentVideoId] = useState(null);
   const pageSize = 2;
   const containerRef = useRef();
 
@@ -67,24 +73,21 @@ function VideoFeed() {
   if (!userId) return <Login onLogin={setUserId} />;
 
   if (error) {
-    return (
-      <div className="error-screen">
-        {error}
-      </div>
-    );
+    return <div className="error-screen">{error}</div>;
   }
 
   return (
     <div className="app-container">
       <div className="sidebar left-sidebar"></div>
-      
-      <div
-        ref={containerRef}
-        className="main-content"
-      >
+
+      <div ref={containerRef} className="main-content">
         {videos.map((video) => (
           <div key={video.id} className="video-container">
-            <VideoCard video={video} />
+            <VideoCard
+              video={video}
+              isActive={currentVideoId === video.id}
+              setCurrentVideoId={setCurrentVideoId}
+            />
           </div>
         ))}
 
@@ -92,9 +95,9 @@ function VideoFeed() {
           <div className="loading-indicator">Loading more videos...</div>
         )}
       </div>
-      
+
       <div className="sidebar right-sidebar"></div>
-      
+
       <BottomNav />
     </div>
   );
